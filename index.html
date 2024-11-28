@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eğitim Platformu</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://www.youtube.com/iframe_api"></script>
+
+    </head>
+    
+<body>
+    <header>
+        <h1>EĞİTİM-BİR-SEN TEŞKİLAT EĞİTİMİ MODÜLÜ</h1>
+    </header>
+    <main>
+        <!-- Kullanıcı Giriş ve Kayıt Formu -->
+        <section id="auth-section">
+            <h2>Giriş Yap / Kayıt Ol</h2>
+
+            <!-- Giriş Formu -->
+            <form id="login-form" class="hidden">
+                <label for="username">Kullanıcı Adı:</label>
+                <input type="text" id="username" placeholder="Kullanıcı Adınızı Girin" required>
+
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" placeholder="Şifrenizi Girin" required>
+
+                <button type="button" id="login-button">Giriş Yap</button>
+            </form>
+
+            <!-- Kayıt Ol Formu -->
+            <form id="register-form">
+                <label for="first-name">Ad:</label>
+                <input type="text" id="first-name" placeholder="Adınızı Girin" required>
+
+                <label for="last-name">Soyad:</label>
+                <input type="text" id="last-name" placeholder="Soyadınızı Girin" required>
+
+                <label for="register-username">Kullanıcı Adı:</label>
+                <input type="text" id="register-username" placeholder="Kullanıcı Adınızı Girin" required>
+
+                <label for="register-password">Şifre:</label>
+                <input type="password" id="register-password" placeholder="Şifrenizi Girin" required>
+
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" placeholder="E-posta Adresinizi Girin" required>
+
+                <button type="button" id="register-button">Kayıt Ol</button>
+            </form>
+        </section>
+        <!-- Eğitim Videosu -->
+        <section id="video-section" class="hidden">
+            <h2>Eğitim Videosu</h2>
+            <iframe
+                id="training-video"
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/mCB3chkPoMo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <button id="complete-video-button" disabled>Videoyu Tamamladım</button>
+        </section>
+        
+
+        <!-- Quiz Bölümü -->
+        <section id="quiz-section" class="hidden">
+            <h2>Çoktan Seçmeli Sorular</h2>
+            <form id="quiz-form">
+                <ol>
+                    <li>
+                        Eğitim-Bir-Sen hangi yıl kurulmuştur?<br>
+                        <label><input type="radio" name="question-1" value="a"> a) 1988</label><br>
+                        <label><input type="radio" name="question-1" value="b"> b) 1990</label><br>
+                        <label><input type="radio" name="question-1" value="c"> c) 1992</label><br>
+                        <label><input type="radio" name="question-1" value="d"> d) 1995</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in kurucusu kimdir?<br>
+                        <label><input type="radio" name="question-2" value="a"> a) Mehmet Akif Ersoy</label><br>
+                        <label><input type="radio" name="question-2" value="b"> b) Mehmet Akif İnan</label><br>
+                        <label><input type="radio" name="question-2" value="c"> c) Necip Fazıl Kısakürek</label><br>
+                        <label><input type="radio" name="question-2" value="d"> d) İsmet Özel</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in temel ilkelerinden biri olan “değer sendikacılığı” neyi ifade eder?<br>
+                        <label><input type="radio" name="question-3" value="a"> a) Yalnızca ekonomik hakları savunmayı</label><br>
+                        <label><input type="radio" name="question-3" value="b"> b) Maddi ve manevi değerlere sahip çıkmayı</label><br>
+                        <label><input type="radio" name="question-3" value="c"> c) Sadece toplu sözleşmelere odaklanmayı</label><br>
+                        <label><input type="radio" name="question-3" value="d"> d) Eğitim sektörüne yönelik yenilikler yapmayı</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in dayandığı teşkilatlardan biri aşağıdakilerden hangisidir?<br>
+                        <label><input type="radio" name="question-4" value="a"> a) Loncalar</label><br>
+                        <label><input type="radio" name="question-4" value="b"> b) Fütüvvet Teşkilatı</label><br>
+                        <label><input type="radio" name="question-4" value="c"> c) Tekkeler</label><br>
+                        <label><input type="radio" name="question-4" value="d"> d) Ulemalar</label>
+                    </li>
+                    <li>
+                        “Hak-batıl mücadelesi” hangi açıdan Eğitim-Bir-Sen’in misyonunu destekler?<br>
+                        <label><input type="radio" name="question-5" value="a"> a) Ekonomik büyüme</label><br>
+                        <label><input type="radio" name="question-5" value="b"> b) Toplumsal adalet ve hakkaniyet</label><br>
+                        <label><input type="radio" name="question-5" value="c"> c) Akademik başarı</label><br>
+                        <label><input type="radio" name="question-5" value="d"> d) Kültürel asimilasyon</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in kurumsal öncüllerinden biri aşağıdakilerden hangisidir?<br>
+                        <label><input type="radio" name="question-6" value="a"> a) Türk Ocağı</label><br>
+                        <label><input type="radio" name="question-6" value="b"> b) Milli Türk Talebe Birliği (MTTB)</label><br>
+                        <label><input type="radio" name="question-6" value="c"> c) Osmanlı Devleti Sadrazamlar Meclisi</label><br>
+                        <label><input type="radio" name="question-6" value="d"> d) İşçi Sendikaları Konfederasyonu</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in faaliyetleri arasında hangisi yer almaz?<br>
+                        <label><input type="radio" name="question-7" value="a"> a) Toplu sözleşme süreçleri</label><br>
+                        <label><input type="radio" name="question-7" value="b"> b) Sosyal sorumluluk projeleri</label><br>
+                        <label><input type="radio" name="question-7" value="c"> c) Eğitim sektörü dışındaki meslekleri örgütleme</label><br>
+                        <label><input type="radio" name="question-7" value="d"> d) Mesleki gelişim eğitimleri</label>
+                    </li>
+                    <li>
+                        Ahilik Teşkilatı Eğitim-Bir-Sen’e hangi yönüyle ilham vermiştir?<br>
+                        <label><input type="radio" name="question-8" value="a"> a) İşçi haklarının savunulması</label><br>
+                        <label><input type="radio" name="question-8" value="b"> b) Ahlaki ve mesleki dayanışma</label><br>
+                        <label><input type="radio" name="question-8" value="c"> c) Askeri eğitim</label><br>
+                        <label><input type="radio" name="question-8" value="d"> d) Ticari rekabet</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in kurumsal kimliği hangi temel unsurlar üzerine inşa edilmiştir?<br>
+                        <label><input type="radio" name="question-9" value="a"> a) Tarih, politika, hukuk, sosyal bağlam ve inanç</label><br>
+                        <label><input type="radio" name="question-9" value="b"> b) Ekonomi, siyaset, eğitim, kültür ve sanat</label><br>
+                        <label><input type="radio" name="question-9" value="c"> c) Eğitim reformları, adalet sistemi, uluslararası işbirliği</label><br>
+                        <label><input type="radio" name="question-9" value="d"> d) Endüstriyel kalkınma, eğitim standartları, ekonomi politikaları</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in sembollerinden biri olan logo neyi temsil eder?<br>
+                        <label><input type="radio" name="question-10" value="a"> a) Adalet terazisini</label><br>
+                        <label><input type="radio" name="question-10" value="b"> b) Birlik ve dayanışmayı</label><br>
+                        <label><input type="radio" name="question-10" value="c"> c) Sendikal gücü</label><br>
+                        <label><input type="radio" name="question-10" value="d"> d) Eğitim reformlarını</label>
+                    </li>
+                    <li>
+                        Kuruluş amilleri arasında yer alan “kurumsal aidiyet” hangi bağlamda önemlidir?<br>
+                        <label><input type="radio" name="question-11" value="a"> a) Mali destek sağlamak için</label><br>
+                        <label><input type="radio" name="question-11" value="b"> b) Sendika üyesinin bağlılık duygusunu artırmak için</label><br>
+                        <label><input type="radio" name="question-11" value="c"> c) Eğitimde reform yapmak için</label><br>
+                        <label><input type="radio" name="question-11" value="d"> d) Uluslararası tanınırlık kazanmak için</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in ilkeleri arasında yer alan “hasbilik” ne anlama gelir?<br>
+                        <label><input type="radio" name="question-12" value="a"> a) Maddi kazanç odaklı çalışma</label><br>
+                        <label><input type="radio" name="question-12" value="b"> b) İçtenlik ve samimiyetle hareket etme</label><br>
+                        <label><input type="radio" name="question-12" value="c"> c) Hızlı karar alma mekanizması oluşturma</label><br>
+                        <label><input type="radio" name="question-12" value="d"> d) Yönetim organlarını genişletme</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in faaliyetlerinde en çok vurgu yapılan değer aşağıdakilerden hangisidir?<br>
+                        <label><input type="radio" name="question-13" value="a"> a) Liderlik</label><br>
+                        <label><input type="radio" name="question-13" value="b"> b) Dayanışma</label><br>
+                        <label><input type="radio" name="question-13" value="c"> c) Sürdürülebilirlik</label><br>
+                        <label><input type="radio" name="question-13" value="d"> d) Teknolojik gelişim</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in uluslararası çalışmaları hangi perspektiften ele alınır?<br>
+                        <label><input type="radio" name="question-14" value="a"> a) Ekonomik güçlenme</label><br>
+                        <label><input type="radio" name="question-14" value="b"> b) Eğitim politikalarının geliştirilmesi</label><br>
+                        <label><input type="radio" name="question-14" value="c"> c) Küresel eğitim dayanışması</label><br>
+                        <label><input type="radio" name="question-14" value="d"> d) Ulusal bağımsızlık</label>
+                    </li>
+                    <li>
+                        Fütüvvet Teşkilatı’nın sendikal yapıya en büyük katkısı nedir?<br>
+                        <label><input type="radio" name="question-15" value="a"> a) Ticaret kurallarını düzenlemek</label><br>
+                        <label><input type="radio" name="question-15" value="b"> b) Ahlaki değerler ve dayanışmayı ön plana çıkarmak</label><br>
+                        <label><input type="radio" name="question-15" value="c"> c) Askeri eğitim sağlamak</label><br>
+                        <label><input type="radio" name="question-15" value="d"> d) Eğitim sistemlerini geliştirmek</label>
+                    </li>
+
+                    <li>
+                        Eğitim-Bir-Sen hangi konfederasyon çatısı altında faaliyet gösterir?<br>
+                        <label><input type="radio" name="question-16" value="a"> a) Hak-İş</label><br>
+                        <label><input type="radio" name="question-16" value="b"> b) Memur-Sen</label><br>
+                        <label><input type="radio" name="question-16" value="c"> c) Türk-İş</label><br>
+                        <label><input type="radio" name="question-16" value="d"> d) DİSK</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in faaliyet alanı hangi sektöre odaklanır?<br>
+                        <label><input type="radio" name="question-17" value="a"> a) Eğitim sektörü</label><br>
+                        <label><input type="radio" name="question-17" value="b"> b) Sağlık sektörü</label><br>
+                        <label><input type="radio" name="question-17" value="c"> c) Sanayi sektörü</label><br>
+                        <label><input type="radio" name="question-17" value="d"> d) Tarım sektörü</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in faaliyetlerinde önemli bir yer tutan “bilge sendikacı” kavramı neyi ifade eder?<br>
+                        <label><input type="radio" name="question-18" value="a"> a) Hızlı ve etkili karar alma</label><br>
+                        <label><input type="radio" name="question-18" value="b"> b) Bilgi ve deneyimle hareket eden bir liderlik</label><br>
+                        <label><input type="radio" name="question-18" value="c"> c) Finansal yönetimde başarı</label><br>
+                        <label><input type="radio" name="question-18" value="d"> d) Teknolojik yeniliklere öncülük</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in sosyal projelerinin amacı nedir?<br>
+                        <label><input type="radio" name="question-19" value="a"> a) Eğitim sektöründeki yatırımları artırmak</label><br>
+                        <label><input type="radio" name="question-19" value="b"> b) Toplumsal dayanışma ve refahı desteklemek</label><br>
+                        <label><input type="radio" name="question-19" value="c"> c) Üyelerin bireysel gelirlerini artırmak</label><br>
+                        <label><input type="radio" name="question-19" value="d"> d) Yeni üyeler kazandırmak</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in toplu sözleşme süreçlerindeki başarısı hangi faktöre dayanır?<br>
+                        <label><input type="radio" name="question-20" value="a"> a) Mali güce</label><br>
+                        <label><input type="radio" name="question-20" value="b"> b) Üyelerin sayısına</label><br>
+                        <label><input type="radio" name="question-20" value="c"> c) Kurumsal itibar ve değer sendikacılığına</label><br>
+                        <label><input type="radio" name="question-20" value="d"> d) Medya desteğine</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen hangi yıl toplu sözleşme hakkını kazandı?<br>
+                        <label><input type="radio" name="question-21" value="a"> a) 2000</label><br>
+                        <label><input type="radio" name="question-21" value="b"> b) 2008</label><br>
+                        <label><input type="radio" name="question-21" value="c"> c) 2012</label><br>
+                        <label><input type="radio" name="question-21" value="d"> d) 2015</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in yasal dayanağı hangi kanundur?<br>
+                        <label><input type="radio" name="question-22" value="a"> a) 4688 Sayılı Kanun</label><br>
+                        <label><input type="radio" name="question-22" value="b"> b) 657 Sayılı Kanun</label><br>
+                        <label><input type="radio" name="question-22" value="c"> c) 4857 Sayılı Kanun</label><br>
+                        <label><input type="radio" name="question-22" value="d"> d) 193 Sayılı Kanun</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in kurucu lideri Mehmet Akif İnan hangi meslek grubundan gelmektedir?<br>
+                        <label><input type="radio" name="question-23" value="a"> a) Eğitimci</label><br>
+                        <label><input type="radio" name="question-23" value="b"> b) Mühendis</label><br>
+                        <label><input type="radio" name="question-23" value="c"> c) Avukat</label><br>
+                        <label><input type="radio" name="question-23" value="d"> d) Gazeteci</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in ulusal bir sendika olarak kazandığı itibarda en etkili faktör nedir?<br>
+                        <label><input type="radio" name="question-24" value="a"> a) Yenilikçi eğitim politikaları</label><br>
+                        <label><input type="radio" name="question-24" value="b"> b) Üyeler arasındaki dayanışma</label><br>
+                        <label><input type="radio" name="question-24" value="c"> c) Uluslararası işbirlikleri</label><br>
+                        <label><input type="radio" name="question-24" value="d"> d) Teknoloji kullanımı</label>
+                    </li>
+                    <li>
+                        Eğitim-Bir-Sen’in “erdemliler hareketi” olarak adlandırılmasının sebebi nedir?<br>
+                        <label><input type="radio" name="question-25" value="a"> a) Eğitim reformlarına liderlik yapması</label><br>
+                        <label><input type="radio" name="question-25" value="b"> b) Hak ve adalet mücadelesini temel alması</label><br>
+                        <label><input type="radio" name="question-25" value="c"> c) Üyelerinin sayısının fazla olması</label><br>
+                        <label><input type="radio" name="question-25" value="d"> d) Yasal süreçlere öncelik vermesi</label>
+                    </li>
+                    
+                </ol>
+          
+        
+                <button type="submit">Sonuçları Göster</button>
+            </form>
+        </section>
+
+       <!-- Sonuç Bölümü -->
+<section id="result-section" class="hidden">
+    <h2>Sonuçlarınız</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Doğru Cevap Sayısı</th>
+                <th>Yanlış Cevap Sayısı</th>
+                <th>Toplam Puan</th>
+                <th>Durum</th>
+            </tr>
+        </thead>
+        <tbody id="result-table-body">
+            <tr>
+                <td id="correct-count">0</td>
+                <td id="wrong-count">0</td>
+                <td id="total-score">0</td>
+                <td id="status">Belirtilmedi</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="result-actions">
+        <p id="certificate-message" class="hidden">Tebrikler! Sertifika almaya hak kazandınız.</p>
+        <button id="certificate-button" class="hidden">Sertifikayı Görüntüle</button>
+        <button id="retry-button" class="hidden">Eğitimi Tekrar Et</button>
+    </div>
+</section>
+
+        
+    <footer>
+        <p>&copy; 2024 Eğitim-Bir-Sen Teşkilat Eğitimi Modülü</p>
+    </footer>
+   <!-- JavaScript Bağlantısı -->
+   <script src="script.js"></script>
+</body>
+</html>
